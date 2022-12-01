@@ -1,0 +1,32 @@
+.card {
+    width: 173px;
+}
+img {
+    width: 100%;
+    height: 259px;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 0 10px 15px -10px black;
+}
+.card__content {
+    color: #565656;
+    font-weight: bold;
+}
+
+.year {
+    font-size: .7rem;
+    color: #7E7E7E;
+}
+
+.card__image {
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.card:hover .card__image {
+    transform: translateY(-10px);
+}
+
+.card:hover  .title {
+    color: red;
+}

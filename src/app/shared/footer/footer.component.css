@@ -1,0 +1,16 @@
+.pi {
+    font-size: 1.7em;
+    color: white;
+    transition: transform .5s;
+}
+.pi:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+p {
+    font-size: 1.2rem;
+}
+.practice {
+    font-size: .8rem;
+    color: grey;
+}

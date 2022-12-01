@@ -1,0 +1,60 @@
+<section
+  class="w-7 max-w-full m-auto mt-5 flex justify-content-between gap-6 front"
+>
+  <article class="imagen">
+    <img [src]="personaje.thumbnail | imagen" alt="" />
+  </article>
+  <article class="w-full">
+    <h1 class="title mb-5">
+      {{ personaje.name }} ({{ personaje.modified | date: "YYY" }}) #{{
+        personaje.comics.available
+      }}
+    </h1>
+    <p class="mb-5 subtitle">
+      Publisher:
+      <span>
+        {{ personaje.modified | date: "mediumDate" }}
+      </span>
+    </p>
+
+    <div class="m-5 subtitle">
+      <p>
+        Writer:
+        <span> </span>
+      </p>
+    </div>
+
+    <div>
+      {{ personaje.description }}
+    </div>
+  </article>
+</section>
+
+<section
+  class="w-7 max-w-full m-auto mt-7 front bg-white flex flex-column align-items-center border-round p-2"
+>
+  <h2 class="mb-4">Comics</h2>
+
+  <div class="flex flex-wrap gap-5 mb-5">
+    <app-card
+      *ngFor="let comic of comics"
+      [comics]="comic"
+      [routerLink]="['/comic', comic.id]"
+    ></app-card>
+  </div>
+
+  <h2 class="mb-4">Series</h2>
+
+  <div class="flex flex-wrap gap-5">
+    <app-card
+      *ngFor="let serie of series"
+      [series]="serie"
+      [routerLink]="['/serie', serie.id]"
+    ></app-card>
+  </div>
+</section>
+
+<div class="background__image">
+  <img [src]="personaje.thumbnail | imagen" alt="" />
+</div>
+<div class="filter"></div>

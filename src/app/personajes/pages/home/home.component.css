@@ -1,0 +1,12 @@
+.container {
+    background-color: white;
+    color: #565656;
+}
+.subtitle {
+    color: #7E7E7E;
+}
+.separator {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}

@@ -1,0 +1,67 @@
+<main class="flex flex-column relative">
+  <section class="w-5 m-auto mt-5">
+    <p-selectButton
+      [options]="paymentOptions"
+      [(ngModel)]="value"
+      optionLabel="name"
+      optionValue="value"
+      [multiple]="false"
+      class="w-full flex justify-content-center"
+    ></p-selectButton>
+
+    <span class="p-float-label mt-2">
+      <input
+        id="float-input"
+        type="text"
+        class="w-full"
+        pInputText
+        [(ngModel)]="termino"
+        (keyup.enter)="opction()"
+        placeholder="Preciona enter para buscar"
+        pAutoFocus
+        [autofocus]="true"
+      />
+      <label for="float-input">Buscador</label>
+    </span>
+  </section>
+
+  <section class="w-7 max-w-full m-auto mt-5">
+    <article class="flex flex-wrap justify-content-start gap-2 mb-5">
+      <app-card
+        class="mb-3"
+        *ngFor="let personaje of personajes"
+        [personaje]="personaje"
+        [routerLink]="['/personaje', personaje.id]"
+      ></app-card>
+
+      <app-card
+        class="mb-3"
+        *ngFor="let comic of comics"
+        [comics]="comic"
+        [routerLink]="['/comic', comic.id]"
+      ></app-card>
+
+      <app-card
+        class="mb-3"
+        *ngFor="let evento of eventos"
+        [eventos]="evento"
+        [routerLink]="['/evento', evento.id]"
+      ></app-card>
+
+      <app-card
+        class="mb-3"
+        *ngFor="let serie of series"
+        [series]="serie"
+        [routerLink]="['/serie', serie.id]"
+      ></app-card>
+    </article>
+  </section>
+
+  <article *ngIf="personajes" class="absolute bottom-0 left-0 right-0">
+    <p-paginator
+      [rows]="1"
+      [totalRecords]="totalRecords"
+      (onPageChange)="onPageChange($event)"
+    ></p-paginator>
+  </article>
+</main>

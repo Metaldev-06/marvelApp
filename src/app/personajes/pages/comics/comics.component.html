@@ -1,0 +1,20 @@
+<main class="flex flex-column relative">
+  <section class="w-7 max-w-full m-auto mt-5">
+    <article class="flex flex-wrap justify-content-start gap-2 mb-5">
+      <app-card
+        class="mb-3"
+        *ngFor="let comic of comics"
+        [comics]="comic"
+        [routerLink]="['/comic', comic.id]"
+      ></app-card>
+    </article>
+  </section>
+
+  <article class="absolute bottom-0 left-0 right-0">
+    <p-paginator
+      [rows]="1"
+      [totalRecords]="totalRecords"
+      (onPageChange)="onPageChange($event)"
+    ></p-paginator>
+  </article>
+</main>
