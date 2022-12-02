@@ -18,24 +18,31 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (sessionStorage.getItem('personajes') === null) {
-      this.personajesService.getPersonajes(6).subscribe(resp => {
-        this.personajes = resp.data.results;
-        sessionStorage.setItem('personajes', JSON.stringify(resp.data.results));
-      })
-    } else {
-      this.personajes = JSON.parse(sessionStorage.getItem('personajes') || '{}');
-    }
-    
-    if (sessionStorage.getItem('comics') === null) {
-      this.personajesService.getComics(0, 6).subscribe(resp => {
-        this.comics = resp.data.results;
-        sessionStorage.setItem('comics', JSON.stringify(resp.data.results));
-      })
+    this.personajesService.getPersonajes(6).subscribe(resp => {
+      this.personajes = resp.data.results;
+    });
 
-    } else {
-      this.comics = JSON.parse(sessionStorage.getItem('comics') || '{}');
-    }
+    this.personajesService.getComics(0, 6).subscribe(resp => {
+      this.comics = resp.data.results;
+    })
+    // if (sessionStorage.getItem('personajes') === null) {
+    //   this.personajesService.getPersonajes(6).subscribe(resp => {
+    //     this.personajes = resp.data.results;
+    //     sessionStorage.setItem('personajes', JSON.stringify(resp.data.results));
+    //   })
+    // } else {
+    //   this.personajes = JSON.parse(sessionStorage.getItem('personajes') || '{}');
+    // }
+    
+    // if (sessionStorage.getItem('comics') === null) {
+    //   this.personajesService.getComics(0, 6).subscribe(resp => {
+    //     this.comics = resp.data.results;
+    //     sessionStorage.setItem('comics', JSON.stringify(resp.data.results));
+    //   })
+
+    // } else {
+    //   this.comics = JSON.parse(sessionStorage.getItem('comics') || '{}');
+    // }
   }
 
 
