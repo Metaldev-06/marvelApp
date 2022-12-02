@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     if (sessionStorage.getItem('personajes') === null) {
       this.personajesService.getPersonajes(6).subscribe(resp => {
         this.personajes = resp.data.results;
-        sessionStorage.setItem('personajes', JSON.stringify(this.personajes));
+        sessionStorage.setItem('personajes', JSON.stringify(resp.data.results));
       })
     } else {
       this.personajes = JSON.parse(sessionStorage.getItem('personajes') || '{}');
