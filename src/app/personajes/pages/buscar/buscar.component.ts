@@ -37,7 +37,7 @@ export class BuscarComponent {
 
 
   opction() {
-
+    console.log(this.value);
     switch (this.value) {
 
       case 1:
@@ -108,6 +108,8 @@ export class BuscarComponent {
       this.totalRecords = (resp.data.total / resp.data.limit)
       this.personajes = resp.data.results;
       this.comics = [];
+      this.eventos = [];
+      this.series = [];
     })
   }
 
@@ -116,6 +118,8 @@ export class BuscarComponent {
       this.totalRecords = (resp.data.total / resp.data.limit)
       this.comics = resp.data.results;
       this.personajes = [];
+      this.eventos = [];
+      this.series = [];
     })
   }
   buscarEventos() {
@@ -124,6 +128,7 @@ export class BuscarComponent {
       this.eventos = resp.data.results;
       this.personajes = [];
       this.comics = [];
+      this.series = [];
     })
   }
   buscarSeries() {
@@ -135,6 +140,4 @@ export class BuscarComponent {
       this.eventos = [];
     })
   }
-
-
 }
