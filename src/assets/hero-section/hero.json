@@ -1,0 +1,34 @@
+{
+    "data":[
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero1.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        },
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero2.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        },
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero3.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        },
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero4.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        },
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero5.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        },
+        {
+            "previewImageSrc": "../../../../assets/hero-section/hero6.jpg",
+            "alt": "Description for Image 1",
+            "title": "Title 1"
+        }
+    ]
+}

@@ -32,6 +32,9 @@ export class PersonajesService {
     return this.http.get<Personajes>(`${this.url}/v1/public/characters/${id}?${this.apiKey}`)
   }
 
+
+
+
   //TODO: Buscar comics ===========================================================================================================
   getComics( offset: number = 0,limit: number = 20): Observable<Comics> {
     return this.http.get<Comics>(`${this.url}/v1/public/comics?limit=${limit}&offset=${offset}&${this.apiKey}`)
@@ -45,6 +48,9 @@ export class PersonajesService {
     return this.http.get<Comics>(`${this.url}/v1/public/characters/${id}/comics?limit=5?${this.apiKey}`)
   }
 
+
+
+
   //TODO:Buscar Series ===========================================================================================================
   getSeriesById(id: string): Observable<Series> {
     return this.http.get<Series>(`${this.url}/v1/public/characters/${id}/series?limit=5?${this.apiKey}`)
@@ -53,6 +59,9 @@ export class PersonajesService {
   buscarSeries(termino: string, offset: number = 0): Observable<Series> {
     return this.http.get<Series>(`${this.url}/v1/public/series?titleStartsWith=${termino}&offset=${offset}&${this.apiKey}`)
   }
+
+
+
   //TODO:Buscar Eventos ===========================================================================================================
   getEventos(): Observable<Personajes> {
     return this.http.get<Personajes>(`${this.url}/v1/public/events?${this.apiKey}`)
@@ -61,8 +70,12 @@ export class PersonajesService {
   buscarEventos(termino: string, offset: number = 0): Observable<Eventos> {
     return this.http.get<Eventos>(`${this.url}/v1/public/events?nameStartsWith=${termino}&offset=${offset}&${this.apiKey}`)
   }
-  
 
- 
+
+
+  //TODO:Buscar hero images =======================================================================================================
+  getHeroImage(): Observable<any> {
+    return this.http.get<any>(`assets/hero-section/hero.json`)
+  }
   
 }

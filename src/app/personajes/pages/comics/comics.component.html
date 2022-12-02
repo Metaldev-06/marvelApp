@@ -10,7 +10,7 @@
     </article>
   </section>
 
-  <article class="absolute bottom-0 left-0 right-0">
+  <article *ngIf="comics" class="absolute bottom-0 left-0 right-0">
     <p-paginator
       [rows]="1"
       [totalRecords]="totalRecords"

@@ -37,7 +37,6 @@ export class BuscarComponent {
 
 
   opction() {
-    console.log(this.value);
     switch (this.value) {
 
       case 1:

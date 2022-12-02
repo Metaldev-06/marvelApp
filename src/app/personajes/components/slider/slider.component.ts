@@ -9,7 +9,7 @@ import { Result } from '../../interfaces/personajes.interface';
 })
 export class SliderComponent implements OnInit{
 
-  images: Result[] = [];
+  images!: any;
 
   constructor(
     private personajesServices: PersonajesService
@@ -17,17 +17,27 @@ export class SliderComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.personajesServices.getEventos().subscribe(images => this.images = images.data.results);
+    // this.personajesServices.getEventos().subscribe(images => {
+    //   this.images = images.data.results
+    //   console.log(images.data.results);
+    // });
+
+    this.personajesServices.getHeroImage().subscribe(images => {
+      this.images = images.data
+      console.log(images.data);
+    })
+
+    
   }
 
   responsiveOptions: any[] = [
     {
       breakpoint: '1024px',
-      numVisible: 5,
+      numVisible: 1,
     },
     {
       breakpoint: '768px',
-      numVisible: 3,
+      numVisible: 1,
     },
     {
       breakpoint: '560px',
