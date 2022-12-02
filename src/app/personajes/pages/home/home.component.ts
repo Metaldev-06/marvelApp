@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.personajesService.getPersonajes(6).subscribe(resp => {
+    this.personajesService.getPersonajes(0, 6).subscribe(resp => {
       this.personajes = resp.data.results;
       console.log(resp.data.results);
     });

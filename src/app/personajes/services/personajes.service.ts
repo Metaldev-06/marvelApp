@@ -20,8 +20,8 @@ export class PersonajesService {
 
 
   //TODO:Buscar personajes ===========================================================================================================
-  getPersonajes(limit: number = 20): Observable<Personajes> {
-    return this.http.get<Personajes>(`${this.url}/v1/public/characters?limit=${limit}?${this.apiKey}`);
+  getPersonajes(offset: number = 0,limit: number = 20): Observable<Personajes> {
+    return this.http.get<Personajes>(`${this.url}/v1/public/characters?limit=${limit}&offset=${offset}&${this.apiKey}`);
   }
 
   buscarPersonaje(termino: string, offset: number = 0): Observable<Personajes> {
