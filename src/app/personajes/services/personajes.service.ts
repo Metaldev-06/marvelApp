@@ -45,7 +45,7 @@ export class PersonajesService {
   }
 
   getComicsById(id: string): Observable<Comics> {
-    return this.http.get<Comics>(`${this.url}/v1/public/characters/${id}/comics?limit=5?${this.apiKey}`)
+    return this.http.get<Comics>(`${this.url}/v1/public/characters/${id}/comics?limit=5&${this.apiKey}`)
   }
 
 
@@ -53,7 +53,7 @@ export class PersonajesService {
 
   //TODO:Buscar Series ===========================================================================================================
   getSeriesById(id: string): Observable<Series> {
-    return this.http.get<Series>(`${this.url}/v1/public/characters/${id}/series?limit=5?${this.apiKey}`)
+    return this.http.get<Series>(`${this.url}/v1/public/characters/${id}/series?limit=5&${this.apiKey}`)
   }
 
   buscarSeries(termino: string, offset: number = 0): Observable<Series> {
@@ -77,5 +77,4 @@ export class PersonajesService {
   getHeroImage(): Observable<any> {
     return this.http.get<any>(`assets/hero-section/hero.json`)
   }
-  
 }
