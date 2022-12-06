@@ -37,7 +37,7 @@ export class PersonajesService {
 
   //TODO: Buscar comics ===========================================================================================================
   getComics( offset: number = 0,limit: number = 20): Observable<Comics> {
-    return this.http.get<Comics>(`${this.url}/v1/public/comics?limit=${limit}&offset=${offset}&${this.apiKey}`)
+    return this.http.get<Comics>(`${this.url}/v1/public/comics?format=comic&formatType=comic&noVariants=false&hasDigitalIssue=false&limit=${limit}&offset=${offset}&${this.apiKey}`)
   }
 
   buscarComics(termino: string, offset: number = 0): Observable<Comics> {
