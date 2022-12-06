@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
             //     routerLink: ['/']
             // },
             {
-                label:'Personajes',
+                label:'Characters',
                 icon:'pi pi-fw pi-user',
                 routerLink: ['/personajes']
             },
@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
                 routerLink: ['/series']
             },
             {
-                label:'Eventos',
+                label:'Events',
                 icon:'pi pi-fw pi-calendar',
                 routerLink: ['/eventos']
             },

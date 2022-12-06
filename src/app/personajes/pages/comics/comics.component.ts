@@ -12,6 +12,8 @@ export class ComicsComponent implements OnInit {
   comics!: ResultComic[];
   totalRecords!: number;
 
+  color: string = "colorText"
+
   constructor( private personajesService: PersonajesService ) {}
 
   ngOnInit(): void {

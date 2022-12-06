@@ -19,6 +19,8 @@ export class BuscarComponent {
   eventos!: ResultEventos[];
   series!: ResultSeries[];
 
+  color: string = "colorText"
+
   totalRecords!: number;
 
   paymentOptions: any[] = [];

@@ -2,8 +2,8 @@
   <div class="card__image">
     <img [src]="imagen()" alt="" />
   </div>
-  <div class="card__content mt-3">
-    <p class="title">
+  <div class="card__content mt-3" [ngClass]="clase">
+    <p>
       {{ nombre() }}
       {{ personaje ? "#" + personaje.comics.available : "" }}
     </p>

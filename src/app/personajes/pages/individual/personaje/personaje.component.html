@@ -40,6 +40,7 @@
       *ngFor="let comic of comics"
       [comics]="comic"
       [routerLink]="['/comic', comic.id]"
+      [clase]="color"
     ></app-card>
   </div>
 
@@ -50,6 +51,7 @@
       *ngFor="let serie of series"
       [series]="serie"
       [routerLink]="['/serie', serie.id]"
+      [clase]="color"
     ></app-card>
   </div>
 </section>

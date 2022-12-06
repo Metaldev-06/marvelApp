@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   personajes: Result[] = [];
   comics: ResultComic[] = []
 
+  color: string = "title"
+
   constructor(
     private personajesService: PersonajesService
   ) {}

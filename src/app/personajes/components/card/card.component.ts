@@ -16,6 +16,7 @@ export class CardComponent {
   @Input() comics!: ResultComic
   @Input() series!: ResultSeries
   @Input() eventos!: ResultEventos
+  @Input() clase!: string
 
 
 

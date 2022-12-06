@@ -8,6 +8,7 @@
         *ngFor="let evento of eventos"
         [eventos]="evento"
         [routerLink]="['/evento', evento.id]"
+        [clase]="color"
       ></app-card>
     </article>
   </section>

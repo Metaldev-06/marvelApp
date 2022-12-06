@@ -8,6 +8,7 @@
         *ngFor="let serie of series"
         [series]="serie"
         [routerLink]="['/serie', serie.id]"
+        [clase]="color"
       ></app-card>
     </article>
   </section>

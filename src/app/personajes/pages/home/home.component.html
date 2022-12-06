@@ -10,6 +10,7 @@
         *ngFor="let personaje of personajes"
         [personaje]="personaje"
         [routerLink]="['/personaje', personaje.id]"
+        [clase]="color"
       ></app-card>
     </div>
   </article>
@@ -20,6 +21,7 @@
         *ngFor="let comic of comics"
         [comics]="comic"
         [routerLink]="['/comic', comic.id]"
+        [clase]="color"
       ></app-card>
     </div>
   </article>

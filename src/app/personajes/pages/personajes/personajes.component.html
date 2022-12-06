@@ -8,6 +8,7 @@
         *ngFor="let personaje of personajes"
         [personaje]="personaje"
         [routerLink]="['/personaje', personaje.id]"
+        [clase]="color"
       ></app-card>
     </article>
   </section>

@@ -12,6 +12,8 @@ export class PersonajesComponent implements OnInit {
   personajes!: Result[]
   totalRecords!: number;
 
+  color: string = "colorText"
+
   constructor( private personajesService: PersonajesService ) {}
 
   ngOnInit(): void {

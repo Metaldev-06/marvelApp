@@ -30,3 +30,11 @@ img {
 .card:hover  .title {
     color: red;
 }
+
+.colorText {
+    color: rgb(207, 207, 207);
+}
+
+.card:hover  .colorText {
+    color: red;
+}

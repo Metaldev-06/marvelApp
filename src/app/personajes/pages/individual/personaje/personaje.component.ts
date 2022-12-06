@@ -17,6 +17,8 @@ export class PersonajeComponent implements OnInit{
   comics!: ResultComic[]
   series!: ResultSeries[]
 
+  color: string = "title"
+
   constructor(
     private personajesService: PersonajesService,
     private route: ActivatedRoute,

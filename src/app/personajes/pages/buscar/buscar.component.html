@@ -34,6 +34,7 @@
         class="mb-3"
         *ngFor="let personaje of personajes"
         [personaje]="personaje"
+        [clase]="color"
         [routerLink]="['/personaje', personaje.id]"
       ></app-card>
 
@@ -42,6 +43,7 @@
         *ngFor="let comic of comics"
         [comics]="comic"
         [routerLink]="['/comic', comic.id]"
+        [clase]="color"
       ></app-card>
 
       <app-card
@@ -49,6 +51,7 @@
         *ngFor="let evento of eventos"
         [eventos]="evento"
         [routerLink]="['/evento', evento.id]"
+        [clase]="color"
       ></app-card>
 
       <app-card
@@ -56,6 +59,7 @@
         *ngFor="let serie of series"
         [series]="serie"
         [routerLink]="['/serie', serie.id]"
+        [clase]="color"
       ></app-card>
     </article>
   </section>

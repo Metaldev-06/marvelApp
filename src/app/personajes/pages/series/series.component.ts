@@ -12,6 +12,8 @@ export class SeriesComponent {
   series!: ResultSeries[]
   totalRecords!: number;
 
+  color: string = "colorText"
+
   constructor( private personajesService: PersonajesService ) {}
 
   ngOnInit(): void {

@@ -8,6 +8,7 @@
         *ngFor="let comic of comics"
         [comics]="comic"
         [routerLink]="['/comic', comic.id]"
+        [clase]="color"
       ></app-card>
     </article>
   </section>

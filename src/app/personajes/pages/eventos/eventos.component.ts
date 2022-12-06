@@ -13,6 +13,8 @@ export class EventosComponent {
   eventos!: ResultEventos[];
   totalRecords!: number;
 
+  color: string = "colorText"
+
   constructor( private personajesService: PersonajesService ) {}
 
   ngOnInit(): void {
