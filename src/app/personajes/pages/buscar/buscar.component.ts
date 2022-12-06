@@ -30,9 +30,9 @@ export class BuscarComponent {
     private personajesService: PersonajesService
   ) {
     this.paymentOptions = [
-      {name: 'Personajes', value: 1},
+      {name: 'Characters', value: 1},
       {name: 'Comics', value: 2},
-      {name: 'Eventos', value: 3},
+      {name: 'Events', value: 3},
       {name: 'Series', value: 4}
   ];
   }
@@ -60,7 +60,6 @@ export class BuscarComponent {
       default:
         this.buscarPersonajes() 
         break;
-
     }
   }
 
