@@ -22,9 +22,6 @@ export class ComicsComponent implements OnInit {
 
   }
 
-  bucar() {
-    
-  }
   onPageChange(event: any) {
      this.personajesService.getComics(event.page * 20, 20).subscribe(resp => {
         this.comics = resp.data.results;

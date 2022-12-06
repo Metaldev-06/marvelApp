@@ -52,6 +52,9 @@ export class PersonajesService {
 
 
   //TODO:Buscar Series ===========================================================================================================
+  getSeries( offset: number = 0,limit: number = 20): Observable<Series> {
+    return this.http.get<Series>(`${this.url}/v1/public/series?limit=${limit}&offset=${offset}&${this.apiKey}`)
+  }
   getSeriesById(id: string): Observable<Series> {
     return this.http.get<Series>(`${this.url}/v1/public/characters/${id}/series?limit=5&${this.apiKey}`)
   }
@@ -63,8 +66,8 @@ export class PersonajesService {
 
 
   //TODO:Buscar Eventos ===========================================================================================================
-  getEventos(): Observable<Personajes> {
-    return this.http.get<Personajes>(`${this.url}/v1/public/events?${this.apiKey}`)
+  getEventos( offset: number = 0,limit: number = 20): Observable<Eventos> {
+    return this.http.get<Eventos>(`${this.url}/v1/public/events?limit=${limit}&offset=${offset}&${this.apiKey}`)
   }
 
   buscarEventos(termino: string, offset: number = 0): Observable<Eventos> {

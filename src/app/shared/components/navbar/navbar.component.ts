@@ -19,14 +19,14 @@ export class NavbarComponent implements OnInit {
                 routerLink: ['/']
             },
             {
-                label:'Comics',
-                icon:'pi pi-fw pi-file',
-                routerLink: ['/comics']
-            },
-            {
                 label:'Personajes',
                 icon:'pi pi-fw pi-user',
                 routerLink: ['/personajes']
+            },
+            {
+                label:'Comics',
+                icon:'pi pi-fw pi-file',
+                routerLink: ['/comics']
             },
             {
                 label:'Series',
