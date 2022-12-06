@@ -11,7 +11,7 @@ import { Eventos } from '../interfaces/eventos.interface';
 })
 export class PersonajesService {
 
-  url: string ="https://marvel-app-vert-seven.vercel.app*.gateway.marvel.com:443";
+  url: string ="https://gateway.marvel.com:443";
   apiKey: string = "ts=1&apikey=e52291f500fea566deb2e98cf3d6f4f3&hash=f154b464381aa348b172f922dbd97804";
 
   constructor(
