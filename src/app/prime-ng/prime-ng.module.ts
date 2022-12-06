@@ -10,7 +10,9 @@ import {ButtonModule} from 'primeng/button';
 import {PaginatorModule} from 'primeng/paginator';
 import {AutoFocusModule} from 'primeng/autofocus';
 import {SkeletonModule} from 'primeng/skeleton';
+import {RippleModule} from 'primeng/ripple';
 
+import {TabMenuModule} from 'primeng/tabmenu';
 
 
 
@@ -26,7 +28,9 @@ import {SkeletonModule} from 'primeng/skeleton';
     ButtonModule,
     PaginatorModule,
     AutoFocusModule,
-    SkeletonModule
+    SkeletonModule,
+    TabMenuModule,
+    RippleModule
   ]
 })
 export class PrimeNgModule { }

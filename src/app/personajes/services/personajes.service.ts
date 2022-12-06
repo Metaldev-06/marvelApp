@@ -48,6 +48,10 @@ export class PersonajesService {
     return this.http.get<Comics>(`${this.url}/v1/public/characters/${id}/comics?limit=5&${this.apiKey}`)
   }
 
+  getComicById(id: string): Observable<Comics> {
+    return this.http.get<Comics>(`${this.url}/v1/public/comics/${id}?${this.apiKey}`)
+  }
+
 
 
 
@@ -63,6 +67,10 @@ export class PersonajesService {
     return this.http.get<Series>(`${this.url}/v1/public/series?titleStartsWith=${termino}&offset=${offset}&${this.apiKey}`)
   }
 
+  getSerieById(id: string): Observable<Series> {
+    return this.http.get<Series>(`${this.url}/v1/public/series/${id}?${this.apiKey}`)
+  }
+
 
 
   //TODO:Buscar Eventos ===========================================================================================================
@@ -72,6 +80,9 @@ export class PersonajesService {
 
   buscarEventos(termino: string, offset: number = 0): Observable<Eventos> {
     return this.http.get<Eventos>(`${this.url}/v1/public/events?nameStartsWith=${termino}&offset=${offset}&${this.apiKey}`)
+  }
+  getEventosById(id: string): Observable<Eventos> {
+    return this.http.get<Eventos>(`${this.url}/v1/public/events/${id}?${this.apiKey}`)
   }
 
 

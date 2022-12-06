@@ -40,7 +40,7 @@ export class BuscarComponent {
     switch (this.value) {
 
       case 1:
-        this.buscarPersonajes() 
+        this.buscarPersonajes()
         break;
       
       case 2:

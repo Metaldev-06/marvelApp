@@ -24,7 +24,6 @@ export class SliderComponent implements OnInit{
 
     this.personajesServices.getHeroImage().subscribe(images => {
       this.images = images.data
-      console.log(images.data);
     })
 
     

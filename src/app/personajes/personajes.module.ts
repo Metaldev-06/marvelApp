@@ -14,7 +14,7 @@ import { PersonajeComponent } from './pages/individual/personaje/personaje.compo
 import { ComicComponent } from './pages/individual/comic/comic.component';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './components/filter/filter.component';
-import { PersonajePipe } from './pipes/personaje.pipe';
+import { llevaFechaPipe } from './pipes/llevaFecha.pipe';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { ComicsComponent } from './pages/comics/comics.component';
 import { PersonajesComponent } from './pages/personajes/personajes.component';
@@ -38,7 +38,7 @@ import { PageErrorComponent } from './pages/page-error/page-error.component';
     PersonajeComponent,
     ComicComponent,
     FilterComponent,
-    PersonajePipe,
+    llevaFechaPipe,
     PaginatorComponent,
     ComicsComponent,
     PersonajesComponent,

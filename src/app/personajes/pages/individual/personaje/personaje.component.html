@@ -6,14 +6,14 @@
   </article>
   <article class="w-full">
     <h1 class="title mb-5">
-      {{ personaje.name }} ({{ personaje.modified | date: "YYY" }}) #{{
+      {{ personaje.name }} ({{ personaje.modified | date : "YYY" }}) #{{
         personaje.comics.available
       }}
     </h1>
     <p class="mb-5 subtitle">
       Publisher:
       <span>
-        {{ personaje.modified | date: "mediumDate" }}
+        {{ personaje.modified | date : "mediumDate" }}
       </span>
     </p>
 
@@ -35,7 +35,7 @@
 >
   <h2 class="mb-4">Comics</h2>
 
-  <div class="flex flex-wrap gap-5 mb-5">
+  <div class="flex justify-content-center flex-wrap gap-5 mb-5">
     <app-card
       *ngFor="let comic of comics"
       [comics]="comic"
@@ -45,7 +45,7 @@
 
   <h2 class="mb-4">Series</h2>
 
-  <div class="flex flex-wrap gap-5">
+  <div class="flex justify-content-center flex-wrap gap-5">
     <app-card
       *ngFor="let serie of series"
       [series]="serie"

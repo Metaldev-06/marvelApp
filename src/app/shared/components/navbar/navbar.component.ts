@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {MegaMenuItem,MenuItem} from 'primeng/api';
+import {MenuItem, PrimeNGConfig} from 'primeng/api';
 
 @Component({
   selector: 'app-navbar',
@@ -10,14 +10,17 @@ import {MegaMenuItem,MenuItem} from 'primeng/api';
 export class NavbarComponent implements OnInit {
 
   items!: MenuItem[];
+  activeItem!: MenuItem;
+
+  constructor(private primengConfig: PrimeNGConfig) {}
 
     ngOnInit() {
         this.items = [
-            {
-                label: 'Home',
-                icon: 'pi pi-fw pi-home',
-                routerLink: ['/']
-            },
+            // {
+            //     label: 'Home',
+            //     icon: 'pi pi-fw pi-home',
+            //     routerLink: ['/']
+            // },
             {
                 label:'Personajes',
                 icon:'pi pi-fw pi-user',
@@ -39,5 +42,7 @@ export class NavbarComponent implements OnInit {
                 routerLink: ['/eventos']
             },
         ];
+        this.activeItem = this.items[0];
+        this.primengConfig.ripple = true;
     }
 }

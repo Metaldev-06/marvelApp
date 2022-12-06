@@ -38,7 +38,7 @@ export class CardComponent {
       return this.personaje.modified;
       
     } else if (this.comics) {
-      return this.comics.modified;
+      return this.comics.modified ;
       
     } else if (this.series) {
       return this.series.modified;

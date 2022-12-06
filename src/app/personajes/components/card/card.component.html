@@ -7,6 +7,6 @@
       {{ nombre() }}
       {{ personaje ? "#" + personaje.comics.available : "" }}
     </p>
-    <p class="year">({{ fecha() | date: "YYY" }})</p>
+    <p class="year">{{ fecha() | date : "YYY" | llevaFecha }}</p>
   </div>
 </div>
