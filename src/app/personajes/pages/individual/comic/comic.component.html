@@ -6,7 +6,7 @@
   </article>
   <article class="w-full">
     <h1 class="title mb-5">
-      {{ comics.title }} ({{ comics.modified | date : "YYY" }})
+      {{ comics.title }} {{ comics.modified | date : "YYY" | llevaFecha }}
     </h1>
     <p class="mb-5 subtitle">
       Publisher:
