@@ -1,15 +1,14 @@
 <main class="flex flex-column relative">
-  <section class="w-5 m-auto mt-5">
-    <p-selectButton
-      [options]="paymentOptions"
-      [(ngModel)]="value"
-      optionLabel="name"
-      optionValue="value"
-      [multiple]="false"
-      class="w-full flex justify-content-center"
-      (click)="opction()"
-    ></p-selectButton>
-
+  <p-selectButton
+    [options]="paymentOptions"
+    [(ngModel)]="value"
+    optionLabel="name"
+    optionValue="value"
+    [multiple]="false"
+    class="w-full flex justify-content-center mt-5 mb-3"
+    (click)="opction()"
+  ></p-selectButton>
+  <section class="w-full max-w-30rem min-w-200 m-auto">
     <span class="p-float-label mt-2">
       <input
         id="float-input"
